@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student exercise</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+        <h1>Test Form</h1>
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name"/>
+        <label for="password">Password: </label>
+        <input type="password" id="password" name="password"/>
+        </fieldset>
+        <fieldset>
+        <legend>Gender</legend>
+        <input type="radio" name="Gender" id="Male" value="Male"/>
+        <label for="Gender">Male</label>
+        <input type="radio" name="Gender" id="Female" value="Female"/>
+        <label for="Gender">Female</label>
+        </fieldset>
+        <fieldset>
+            <legend>Continent</legend>
+            <label for="Continent">Continent</label>
+            <select name="Continent" id="Continent">
+                <option value="Continent" selected>Please select</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Africe">Africa</option>
+                <option value="North America">North America</option>
+                <option value="South America">South America</option>
+                <option value="Australia">Australia</option>
+                <option value="Antarctica">Antarctica</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Meals</legend>
+            <input type="checkbox" name="breakfast" id="breakfast" value="breakfast"/>
+            <label for="breakfast">breakfast</label>
+            <input type="checkbox" name="lunch" id="lunch" value="lunch"/>
+            <label for="lunch">lunch</label>
+            <input type="checkbox" name="dinner" id="dinner" value="dinner"/>
+            <label for="dinner">dinner</label>
+        </fieldset>
+        <fieldset>
+            <legend>Remark</legend>
+            <textarea id="Remark" name="Remark" cols="40" rows="10"></textarea>
+        </fieldset>
+        <input type="submit" value="Send"/>
+        <input type="reset" value="Cancle"/>
+    </form>
+</body>
+</html>
