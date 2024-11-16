@@ -1,0 +1,16 @@
+* {
+    font-family: 'Franklin Gothic Medium'
+}
+
+ .italic {
+    font-style: italic;
+    font-weight: 20px;
+ }
+ #paragraph01 {
+    font-style: unset;
+    color: black;
+ }
+ #paragraph02 {
+    font-style: italic;
+    color: black;
+ }
