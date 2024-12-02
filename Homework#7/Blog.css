@@ -1,0 +1,27 @@
+h1, p {
+    text-align: center;
+}
+a {
+    font-weight: bold;
+    color: black;
+}
+.nav1 {
+    position: absolute;
+    right: 250px;
+}
+.nav2 {
+    position: absolute;
+    right: 190px;
+}
+.nav3 {
+    position: absolute;
+    right:  150px;
+}
+.nav4 {
+    position: absolute;
+    right: 110px;
+}
+.nav5 {
+    position: absolute;
+    right: 50px;
+}

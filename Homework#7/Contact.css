@@ -1,0 +1,54 @@
+h1, p {
+    text-align: center;
+}
+a {
+    font-weight: bold;
+}
+form {
+    position: absolute;
+    left: 500px;
+}
+.down {
+    position: absolute;
+    top: 150px;
+}
+.comment {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+}
+.bottom {
+    position: absolute;
+    top: 65px;
+}
+label {
+    font-weight: bold;
+}
+button {
+    border: black solid 5px;
+    background-color: white;
+    position: absolute;
+    top: 270px;
+    left: 10px;
+}
+
+.nav1 {
+    position: absolute;
+    right: 250px;
+}
+.nav2 {
+    position: absolute;
+    right: 190px;
+}
+.nav3 {
+    position: absolute;
+    right:  150px;
+}
+.nav4 {
+    position: absolute;
+    right: 110px;
+}
+.nav5 {
+    position: absolute;
+    right: 50px;
+}

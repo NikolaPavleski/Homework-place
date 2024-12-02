@@ -1,0 +1,56 @@
+span {
+    font-weight: bold;
+}
+h2 {
+    text-align: center;
+}
+.centar {
+    text-align: center;
+}
+.wrapper {
+    align-items: center;
+    border: 1px solid #ccc;
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+}
+img {
+    margin-right: 1rem;
+}
+img {
+    height: auto; 
+    max-width: 100%;
+}
+.middle {
+    text-align: center;
+}
+.start {
+    border: black solid 5px;
+    background-color: azure;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    left: 550px;
+}
+
+.nav1 {
+    position: absolute;
+    right: 250px;
+}
+.nav2 {
+    position: absolute;
+    right: 190px;
+}
+.nav3 {
+    position: absolute;
+    right:  150px;
+}
+.nav4 {
+    position: absolute;
+    right: 110px;
+}
+.nav5 {
+    position: absolute;
+    right: 50px;
+}

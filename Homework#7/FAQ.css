@@ -1,0 +1,38 @@
+.question-container {
+    max-width: 1200px;
+    margin: 0px auto 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 15px;
+    background-color: blueviolet;
+    color: white;
+}
+
+.question {
+    max-width: 750px;
+    border: 2px solid black;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.nav1 {
+    position: absolute;
+    right: 250px;
+}
+.nav2 {
+    position: absolute;
+    right: 190px;
+}
+.nav3 {
+    position: absolute;
+    right:  150px;
+}
+.nav4 {
+    position: absolute;
+    right: 110px;
+}
+.nav5 {
+    position: absolute;
+    right: 50px;
+}
