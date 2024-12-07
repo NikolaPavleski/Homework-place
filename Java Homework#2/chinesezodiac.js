@@ -1,33 +1,37 @@
-let userInput = prompt("Pick a number from 0 to 11 for your zodiac.");
+function getChineseZodiac(year) {
+    let result = (year - 4) % 12;
 
-let userNumber = Number(userInput);
-
-if (Number. isNaN(userNumber)) {
-    console.log("Invalid input. Try again");
-} else if (userNumber ===0) {
-    console.log("You got the Rat.");
-} else if (userNumber ===1) {
-    console.log("You got the Ox.");
-} else if (userNumber ===2) {
-    console.log("You got the Tiger.");
-} else if (userNumber ===3) {
-    console.log("You got the Rabbit.");
-} else if (userNumber ===4) {
-    console.log("You got the Dragon.");
-} else if (userNumber ===5) {
-    console.log("You got the Snake.");
-} else if (userNumber ===6) {
-    console.log("You got the Horse.");
-} else if (userNumber ===7) {
-    console.log("You got the Goat.");
-} else if (userNumber ==8) {
-    console.log("You got the Monkey.");
-} else if (userNumber ===9) {
-    console.log("You got the Rooster.");
-} else if (userNumber ===10) {
-    console.log("You got the Dog.");
-} else if (userNumber ===11) {
-    console.log("You got the Pig.")
-} else {
-    console.log("Invalid number. Try again.");
+    let zodiac;
+    if (result === 0) {
+        zodiac = "Rat";
+    } else if (result === 1) {
+        zodiac = "Ox";
+    } else if (result === 2) {
+        zodiac = "Tiger";
+    } else if (result === 3) {
+        zodiac = "Rabbit";
+    } else if (result === 4) {
+        zodiac = "Dragon";
+    } else if (result === 5) {
+        zodiac = "Snake";
+    } else if (result === 6) {
+        zodiac = "Horse";
+    } else if (result === 7) {
+        zodiac = "Goat";
+    } else if (result === 8) {
+        zodiac = "Monkey";
+    } else if (result === 9) {
+        zodiac = "Rooster";
+    } else if (result === 10) {
+        zodiac = "Dog";
+    } else if (result === 11) {
+        zodiac = "Pig";
+    }
+    
+    return zodiac;
 }
+
+let year = prompt("Enter a year to find the Chinese Zodiac:");
+year = parseInt(year);
+
+console.log("The Chinese Zodiac for the year " + year + " is: " + getChineseZodiac(year));
