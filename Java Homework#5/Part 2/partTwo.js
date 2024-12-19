@@ -4,9 +4,9 @@ let book = {
     readingStatus: false,
     readingQuestion: function() {
         if (this.readingStatus === false) {
-            return console.log("You haven't read the book yet!");
+            return console.log("You haven't read", `${this.title}`, "by", `${this.author}`);
         } else {
-            return console.log("You have read the book.");
+            return console.log("You have read", `${this.title}`, "by", `${this.author}`);
         }
     }
 };

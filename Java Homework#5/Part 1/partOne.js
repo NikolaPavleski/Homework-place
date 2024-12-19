@@ -1,6 +1,8 @@
 let animal = {
     name: 'Johnny',
-    kind: 'German Shepard',
-    speak: 'Hey bro!'
-}
-console.log('the Dog says:', animal.speak)
+    kind: 'German Shepherd',
+    speak: function(greeting) {
+        console.log('The Dog says:', greeting);
+    }
+};
+animal.speak('Hey bro!')
