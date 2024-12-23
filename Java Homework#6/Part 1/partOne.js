@@ -1,0 +1,10 @@
+let mainHeading = document.getElementById('mainHeading');
+mainHeading.textContent = 'This has been changed.';
+let paragraph = document.getElementsByClassName('paragraph')[0];
+paragraph.textContent = 'This has been changed as well';
+let secondParagraph = document.getElementsByClassName('paragraph')[1];
+secondParagraph.textContent = 'This as well';
+let otherHeading = document.getElementsByTagName('h1')[1];
+otherHeading.textContent = 'And also this has been updated';
+let finalHeading = document.getElementsByTagName('h3')[0];
+finalHeading.textContent = 'And finally, this as well';
