@@ -1,0 +1,27 @@
+[
+  {
+    "timestamp": "2025-03-16T23:09:25.684Z",
+    "method": "GET",
+    "url": "/books%0D%0A"
+  },
+  {
+    "timestamp": "2025-03-16T23:11:53.900Z",
+    "method": "GET",
+    "url": "/books"
+  },
+  {
+    "timestamp": "2025-03-18T17:51:43.777Z",
+    "method": "GET",
+    "url": "/books"
+  },
+  {
+    "timestamp": "2025-03-18T21:50:37.740Z",
+    "method": "GET",
+    "url": "/books"
+  },
+  {
+    "timestamp": "2025-03-18T22:33:22.728Z",
+    "method": "GET",
+    "url": "/books"
+  }
+]
