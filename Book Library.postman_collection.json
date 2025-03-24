@@ -1,0 +1,33 @@
+{
+	"info": {
+		"_postman_id": "7d950284-6157-4bcd-b1af-dd6e0447f12c",
+		"name": "Book Library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43150154"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/books",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
