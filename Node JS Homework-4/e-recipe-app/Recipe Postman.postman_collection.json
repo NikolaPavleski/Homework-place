@@ -1,0 +1,33 @@
+{
+	"info": {
+		"_postman_id": "6350ca97-6555-4f9c-ae60-88df92040f9f",
+		"name": "Recipe Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43150154"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/api/chefs",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/chefs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"chefs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
