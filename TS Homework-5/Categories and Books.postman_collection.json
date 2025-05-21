@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "30b41e2b-b517-446e-a2b1-6195b36d5dc5",
+		"name": "Categories and Books",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43150154"
+	},
+	"item": [
+		{
+			"name": "Categories POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"The Shining\",\r\n  \"description\": \"A father slowly goes mad inside a haunted mansion\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Categories GET",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"The Shining\",\r\n  \"description\": \"A father slowly goes mad inside a haunted mansion\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Categories PUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"The Shining\",\r\n  \"description\": \"A loving father slowly goes mad inside a haunted mansion as things slowly go wrong for the child and wife\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/categories/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categories",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
