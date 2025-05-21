@@ -1,8 +1,6 @@
-[
-  {
-    "roomNumber": 101,
-    "type": "DOUBLE",
-    "price": 120,
-    "isAvailable": true
-  }
-]
+{
+  "roomNumber": 102,
+  "type": "DOUBLE",
+  "price": 160,
+  "isAvailable": false
+}
