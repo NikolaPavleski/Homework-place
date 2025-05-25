@@ -1,14 +1,12 @@
 import { Injectable, OnModuleInit } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
-import { Book } from './book/book.entity';
-import { Category } from './category/category.entity';
+import { BookService } from './book/book.service';
+import { CategoryService } from './category/category.service';
 
 @Injectable()
 export class AppService implements OnModuleInit {
   constructor(
-    @InjectRepository(Book) private bookRepo: Repository<Book>,
-    @InjectRepository(Category) private categoryRepo: Repository<Category>,
+    private readonly bookService: BookService,
+    private readonly categoryService: CategoryService,
   ) {}
 
   getHello(): string {
@@ -16,24 +14,23 @@ export class AppService implements OnModuleInit {
   }
 
   async onModuleInit() {
-    const category = await this.categoryRepo.findOne({ where: { id: 1 } });
+    const category = await this.categoryService.findOne(1);
     if (!category) {
       console.warn('No category found. Please add one.');
       return;
     }
 
-    const existingBook = await this.bookRepo.findOne({ where: { isbn: '9780747532699' } });
+    const existingBook = await this.bookService.findByIsbn('9780747532699');
     if (!existingBook) {
-      const newBook = this.bookRepo.create({
+      await this.bookService.create({
         title: "Harry Potter and the Sorcerer's Stone",
         author: 'J.K. Rowling',
         publicationYear: 1997,
         isbn: '9780747532699',
         description: 'A fantasy novel about a young wizard',
         available: true,
-        category,
+        categoryId: category.id,
       });
-      await this.bookRepo.save(newBook);
       console.log('Book successfully added.');
     }
   }

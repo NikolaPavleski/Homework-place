@@ -21,7 +21,6 @@ export class CategoryService {
   }
 
   create(dto: CreateCategoryDto) {
-    console.log(dto);
     const category = this.categoryRepo.create(dto);
     return this.categoryRepo.save(category);
   }

@@ -50,6 +50,11 @@ export class BookService {
     return book;
   }
 
+  async findByIsbn(isbn: string): Promise<Book | null> {
+  return this.bookRepo.findOne({ where: { isbn } });
+  }
+
+
   async update(id: number, updateBookDto: UpdateBookDto): Promise<Book> {
     const book = await this.bookRepo.findOne({ where: { id } });
 
