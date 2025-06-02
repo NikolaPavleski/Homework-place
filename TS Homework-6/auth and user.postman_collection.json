@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "f73893a8-8451-41ae-bb63-6d3b3013f79d",
+		"name": "auth and user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43150154"
+	},
+	"item": [
+		{
+			"name": "Register new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"thethirdtestuser\",\r\n  \"email\": \"thethirdtest@gmail.com\",\r\n  \"password\": \"password123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login and get token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"thethirdtest@gmail.com\",\r\n  \"password\": \"password123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post a book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoidGhldGhpcmR0ZXN0dXNlciIsImlhdCI6MTc0ODg4Mjg0NiwiZXhwIjoxNzQ4ODg2NDQ2fQ.69RShrB4r-MscXewnwOPcJenmL0b-GySumpbMllbXtQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"The Pragmatic Programmer\",\r\n  \"author\": \"Andrew Hunt and David Thomas\",\r\n  \"publicationYear\": 1999,\r\n  \"isbn\": \"9780201616224\",\r\n  \"description\": \"Your journey to mastery in software craftsmanship.\",\r\n  \"available\": true,\r\n  \"categoryId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
