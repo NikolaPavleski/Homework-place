@@ -1,0 +1,14 @@
+:host {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.main-container {
+  max-width: 900px;
+  width: 100%;
+  background-color: #1e1e2f; 
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(156, 39, 176, 0.5); 
+}

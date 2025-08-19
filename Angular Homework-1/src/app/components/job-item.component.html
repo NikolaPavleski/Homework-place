@@ -1,0 +1,14 @@
+<div class="job-item">
+  <strong>{{ job.position }}</strong> at {{ job.company }} - ${{ job.startingSalary }}
+  <span class="tag">{{ job.workType }}</span>
+  <button (click)="toggleExpand()">{{ expanded() ? 'Hide' : 'View' }}</button>
+  <button *ngIf="!job.isApplied" (click)="apply.emit()">Apply</button>
+  <button *ngIf="job.isApplied" (click)="cancel.emit()">Cancel</button>
+
+  <div *ngIf="expanded()" class="details">
+    <p><strong>Location:</strong> {{ job.location }}, {{ job.country }}</p>
+    <p><strong>Qualifications:</strong> {{ job.qualifications }}</p>
+    <p><strong>Description:</strong> {{ job.description }}</p>
+    <p><strong>Expires:</strong> {{ job.expires }}</p>
+  </div>
+</div>
