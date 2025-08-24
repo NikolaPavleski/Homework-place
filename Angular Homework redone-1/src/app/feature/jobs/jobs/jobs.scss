@@ -1,0 +1,11 @@
+.job-seeker-app {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+section, aside {
+  background: #111;
+  border-radius: 8px;
+  padding: 1rem;
+}
