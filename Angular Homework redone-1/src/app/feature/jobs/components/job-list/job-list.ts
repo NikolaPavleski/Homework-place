@@ -1,20 +1,20 @@
 import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { JobsService } from '../../../../core/services/jobs.service';
-import { JobItemComponent } from '../job-item/job-item';
+import { Job } from '../../../../core/models/jobs.model';
+import { JobItemComponent } from "../job-item/job-item";
 
 @Component({
   selector: 'app-job-list',
-  standalone: true,
-  imports: [CommonModule, JobItemComponent],
-  template: `
-    <app-job-item
-      *ngFor="let job of jobsService.availableJobs()"
-      [job]="job"
-      (apply)="jobsService.apply($event)">
-    </app-job-item>
-  `
+  templateUrl: './job-list.html',
+  styleUrls: ['./job-list.scss'],
+  imports: [JobItemComponent]
 })
 export class JobListComponent {
-  jobsService = inject(JobsService);
+  private jobsService = inject(JobsService);
+
+  jobs = this.jobsService.availableJobs;
+
+  onApply(job: Job) {
+    this.jobsService.apply(job);
+  }
 }

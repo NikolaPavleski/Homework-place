@@ -5,14 +5,13 @@
 }
 
 body {
-  background: #0b0b0b; 
-  color: #eaeaea; 
-  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: #0b0b0b;
+  color: #eaeaea;
+  font-family: 'Segoe UI', Roboto, system-ui, -apple-system, Arial, sans-serif;
   line-height: 1.5;
   padding: 1rem;
 }
 
-h1, h2, h3 {
-  color: #b27dfc;
-  margin-bottom: 0.5rem;
+h1, h2, h3 { 
+  color: #b27dfc; 
 }

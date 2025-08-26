@@ -1,1 +1,31 @@
-<p>job-item works!</p>
+<div class="job-card">
+  <div class="job-summary">
+    <h3 class="job-title">{{ job.position }}</h3>
+    <div class="job-meta">
+      <span class="company">{{ job.company }}</span>
+      <span class="salary">Salary: {{ job.startingSalary | currency }}</span>
+      <span class="work-type">Work Type: {{ job.workType }}</span>
+    </div>
+
+    <div class="actions">
+      <button class="btn" type="button" (click)="toggleDetails()">
+        @if (expanded()) { Hide details } @else { Show details }
+      </button>
+
+      @if (!job.isApplied) {
+        <button class="btn primary" type="button" (click)="onApply()">Apply</button>
+      } @else {
+        <button class="btn danger" type="button" (click)="onCancel()">Cancel</button>
+      }
+    </div>
+  </div>
+
+  @if (expanded()) {
+    <div class="job-details">
+      <p><strong>Location:</strong> {{ job.location }}, {{ job.country }}</p>
+      <p><strong>Qualifications:</strong> {{ job.qualifications }}</p>
+      <p><strong>Description:</strong> {{ job.description }}</p>
+      <p><strong>Expires:</strong> {{ job.expires }}</p>
+    </div>
+  }
+</div>

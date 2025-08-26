@@ -4,37 +4,30 @@ import { mockJobs } from './mock-jobs';
 
 @Injectable({ providedIn: 'root' })
 export class JobsService {
-  jobs = signal<Job[]>(mockJobs);
+  private readonly _jobs = signal<Job[]>(mockJobs);
 
-  appliedJobs = computed(() => this.jobs().filter(j => j.isApplied));
-  availableJobs = computed(() => this.jobs().filter(j => !j.isApplied));
+  readonly jobs = computed(() => this._jobs());
+  readonly availableJobs = computed(() => this._jobs().filter(j => !j.isApplied));
+  readonly appliedJobs = computed(() => this._jobs().filter(j => j.isApplied));
 
-  totals = computed(() => ({
+  readonly totals = computed(() => ({
     available: this.availableJobs().length,
-    applied: this.appliedJobs().length
+    applied: this.appliedJobs().length,
   }));
 
   apply(job: Job) {
-    this.jobs.update(jobs =>
-      jobs.map(j => j === job ? { ...j, isApplied: true } : j)
-    );
+    this._jobs.update(list => list.map(j => j.id === job.id ? { ...j, isApplied: true } : j));
   }
 
   cancel(job: Job) {
-    this.jobs.update(jobs =>
-      jobs.map(j => j === job ? { ...j, isApplied: false } : j)
-    );
+    this._jobs.update(list => list.map(j => j.id === job.id ? { ...j, isApplied: false } : j));
   }
 
-  sortBySalary() {
-    this.jobs.update(jobs =>
-      [...jobs].sort((a, b) => a.startingSalary - b.startingSalary)
-    );
+  sortBySalaryAsc() {
+    this._jobs.update(list => [...list].sort((a, b) => a.startingSalary - b.startingSalary));
   }
 
   sortByWorkType() {
-    this.jobs.update(jobs =>
-      [...jobs].sort((a, b) => a.workType.localeCompare(b.workType))
-    );
+    this._jobs.update(list => [...list].sort((a, b) => a.workType.localeCompare(b.workType)));
   }
 }

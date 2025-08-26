@@ -1,4 +1,5 @@
 export interface Job {
+  id: number;
   company: string;
   expires: string;
   position: string;
@@ -8,6 +9,5 @@ export interface Job {
   country: string;
   qualifications: string;
   description: string;
-
   isApplied: boolean;
 }

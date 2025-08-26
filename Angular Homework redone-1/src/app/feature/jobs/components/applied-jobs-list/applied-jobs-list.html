@@ -1,1 +1,13 @@
-<p>applied-jobs-list works!</p>
+<section>
+  @if (jobs().length === 0) {
+    <p class="muted">You haven’t applied to any jobs yet.</p>
+  } @else {
+    <ul class="list">
+      @for (job of jobs(); track job.id) {
+        <li class="list-item">
+          <app-job-item [job]="job" (cancel)="onCancel($event)"></app-job-item>
+        </li>
+      }
+    </ul>
+  }
+</section>

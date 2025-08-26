@@ -2,6 +2,7 @@ import { Job } from '../models/jobs.model';
 
 export const mockJobs: Job[] = [
   {
+    id: 1,
     company: 'TechCorp',
     expires: '2025-09-01',
     position: 'Frontend Developer',
@@ -14,6 +15,7 @@ export const mockJobs: Job[] = [
     isApplied: false
   },
   {
+    id: 2,
     company: 'HealthPlus',
     expires: '2025-10-01',
     position: 'Backend Engineer',
@@ -26,6 +28,7 @@ export const mockJobs: Job[] = [
     isApplied: false
   },
   {
+    id: 3,
     company: 'EduSoft',
     expires: '2025-08-30',
     position: 'Fullstack Engineer',
