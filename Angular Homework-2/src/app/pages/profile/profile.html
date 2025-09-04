@@ -1,0 +1,15 @@
+<div class="profile-container">
+  <h2>{{ user.name }}</h2>
+  <h3>{{ user.title }}</h3>
+  <p class="location">{{ user.location }}</p>
+  <p class="status">Current Status: {{ user.status }}</p>
+
+  <h4>Work Experience</h4>
+  <ul>
+    @for (exp of user.experience; track exp.company) {
+      <li>
+        <strong>{{ exp.company }}</strong> - {{ exp.role }} ({{ exp.years }})
+      </li>
+    }
+  </ul>
+</div>

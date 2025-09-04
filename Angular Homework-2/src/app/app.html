@@ -1,0 +1,12 @@
+<h1 class="app-title">JOB SEEKER</h1>
+
+<nav class="navbar">
+  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+  <a routerLink="/jobs" routerLinkActive="active">Jobs</a>
+  <a routerLink="/profile" routerLinkActive="active">Profile</a>
+  <a routerLink="/company/1" routerLinkActive="active">Company</a>
+</nav>
+
+<main class="container">
+  <router-outlet></router-outlet>
+</main>

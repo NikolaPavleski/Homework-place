@@ -1,0 +1,29 @@
+.app-title {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 2rem;
+  color: #eaeaea;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; 
+  background: #222;
+  padding: 1rem;
+}
+
+.navbar a {
+  color: #eaeaea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #00bcd4;
+}
+
+.navbar a.active {
+  border-bottom: 2px solid #00bcd4;
+}
