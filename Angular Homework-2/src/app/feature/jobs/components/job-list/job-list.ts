@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, model } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { JobsService } from '../../../../core/services/jobs.service';
@@ -16,7 +16,7 @@ export class JobListComponent {
 
   jobs = this.jobsService.availableJobs;
 
-  searchTerm = '';
+  searchTerm = model('');
 
   onApply(job: any) {
     this.jobsService.apply(job);

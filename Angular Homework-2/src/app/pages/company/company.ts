@@ -19,7 +19,7 @@ export class CompanyComponent {
   constructor() {
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
-      this.companyJob = this.jobsService.availableJobs().find(j => j.id.toString() === id);
+      this.companyJob = this.jobsService.jobs().find(j => j.id.toString() === id);
     }
   }
 }

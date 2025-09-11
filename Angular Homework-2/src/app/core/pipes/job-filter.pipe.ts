@@ -6,10 +6,20 @@ import { Job } from '../../core/models/jobs.model';
   standalone: true
 })
 export class JobFilterPipe implements PipeTransform {
-  transform(jobs: Job[] | null | undefined, search: string): Job[] | null | undefined {
+  transform(jobs: Job[] | null | undefined, search: any): Job[] | null | undefined {
     if (!jobs) return jobs;
-    if (!search || !search.trim()) return jobs;
-    const q = search.toLowerCase().trim();
+
+    let q = '';
+    if (typeof search === 'function') {
+      try { q = String(search()); } catch { q = ''; }
+    } else {
+      q = String(search ?? '');
+    }
+
+    if (!q.trim()) return jobs;
+
+    q = q.toLowerCase().trim();
+
     return jobs.filter(j =>
       (j.position && j.position.toLowerCase().includes(q)) ||
       (j.company && j.company.toLowerCase().includes(q)) ||

@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, signal } from '@angular/core';
+import { Component, signal, input, output } from '@angular/core';
 import { Job } from '../../../../core/models/jobs.model';
 import { CurrencyPipe, DatePipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -7,12 +7,14 @@ import { RouterLink } from '@angular/router';
   selector: 'app-job-item',
   templateUrl: './job-item.html',
   styleUrls: ['./job-item.scss'],
-  imports: [CurrencyPipe, DatePipe, RouterLink]
+  imports: [CurrencyPipe, DatePipe, RouterLink],
+  standalone: true
 })
 export class JobItemComponent {
-  @Input({ required: true }) job!: Job;
-  @Output() apply = new EventEmitter<Job>();
-  @Output() cancel = new EventEmitter<Job>();
+  job = input.required<Job>();
+
+  apply = output<Job>();
+  cancel = output<Job>();
 
   private readonly _expanded = signal(false);
   expanded = this._expanded.asReadonly();
@@ -22,10 +24,10 @@ export class JobItemComponent {
   }
 
   onApply() {
-    this.apply.emit(this.job);
+    this.apply.emit(this.job());
   }
 
   onCancel() {
-    this.cancel.emit(this.job);
+    this.cancel.emit(this.job());
   }
 }

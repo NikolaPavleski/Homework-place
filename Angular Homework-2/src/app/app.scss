@@ -17,13 +17,11 @@
   color: #eaeaea;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.2s ease;
 }
 
-.navbar a:hover {
-  color: #00bcd4;
+.navbar a:hover { 
+  color: #00bcd4; 
 }
-
-.navbar a.active {
-  border-bottom: 2px solid #00bcd4;
+.navbar a.active { 
+  border-bottom: 2px solid #00bcd4; 
 }
