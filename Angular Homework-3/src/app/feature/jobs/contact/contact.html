@@ -1,0 +1,31 @@
+<div class="contact-container">
+  <h2>Contact Us</h2>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <label>First Name</label>
+    <input formControlName="firstName" type="text" />
+
+    <label>Last Name</label>
+    <input formControlName="lastName" type="text" />
+
+    <label>Email</label>
+    <input formControlName="email" type="email" />
+
+    <label>Phone Number</label>
+    <input formControlName="phoneNumber" type="tel" />
+
+    <label>Message</label>
+    <textarea formControlName="message"></textarea>
+
+    <button type="submit" [disabled]="contactForm.invalid">Send Message</button>
+  </form>
+
+  <div class="company-info">
+    <h3>About Job Seeker</h3>
+    <p>Job Seeker connects talented people with amazing opportunities worldwide.</p>
+    <div class="social-links">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+    </div>
+  </div>
+</div>

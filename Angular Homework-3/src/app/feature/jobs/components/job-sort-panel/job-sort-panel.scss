@@ -1,0 +1,16 @@
+.sort-panel {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+button {
+  background: #2a2a2a;
+  color: #b27dfc;
+  border: 1px solid #7e3ff2;
+}
+
+button:hover {
+  background: #7e3ff2;
+  color: #fff;
+}

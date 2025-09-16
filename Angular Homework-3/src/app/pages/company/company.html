@@ -1,0 +1,15 @@
+<div class="company-container">
+  @if (companyJob) {
+    <h2>{{ companyJob.company }}</h2>
+    <p><strong>Position:</strong> {{ companyJob.position }}</p>
+    <p><strong>Location:</strong> {{ companyJob.location }}, {{ companyJob.country }}</p>
+    <p><strong>Description:</strong> {{ companyJob.description }}</p>
+    <p><strong>Qualifications:</strong> {{ companyJob.qualifications }}</p>
+  } @else {
+    <p>No company details found.</p>
+  }
+</div>
+
+<ng-template #notFound>
+  <p>No company details found.</p>
+</ng-template>

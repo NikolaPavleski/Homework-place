@@ -1,0 +1,17 @@
+<section>
+  <div class="search-box">
+    <input type="text" placeholder="Search jobs..." [(ngModel)]="searchTerm" />
+  </div>
+
+  @if (jobs().length === 0) {
+    <p class="muted">No available jobs.</p>
+  } @else {
+    <ul class="list">
+      @for (job of (jobs() | jobFilter:searchTerm); track job.id) {
+        <li class="list-item">
+          <app-job-item [job]="job" (apply)="onApply($event)"></app-job-item>
+        </li>
+      }
+    </ul>
+  }
+</section>

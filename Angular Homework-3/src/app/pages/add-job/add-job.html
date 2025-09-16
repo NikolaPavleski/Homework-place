@@ -1,0 +1,33 @@
+<div class="form-container">
+  <h2>Add Job</h2>
+  <form [formGroup]="jobForm" (ngSubmit)="onSubmit()">
+    <label>Position</label>
+    <input formControlName="position" type="text" />
+
+    <label>Company</label>
+    <input formControlName="company" type="text" />
+
+    <label>Location</label>
+    <input formControlName="location" type="text" />
+
+    <label>Country</label>
+    <input formControlName="country" type="text" />
+
+    <label>Qualifications</label>
+    <input formControlName="qualifications" type="text" />
+
+    <label>Description</label>
+    <textarea formControlName="description"></textarea>
+
+    <label>Starting Salary</label>
+    <input formControlName="startingSalary" type="number" />
+
+    <label>Work Type</label>
+    <input formControlName="workType" type="text" />
+
+    <label>Expires</label>
+    <input formControlName="expires" type="date" />
+
+    <button type="submit" [disabled]="jobForm.invalid">Add Job</button>
+  </form>
+</div>
