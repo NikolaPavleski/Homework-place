@@ -4,6 +4,7 @@ export const mockJobs: Job[] = [
   {
     id: 1,
     company: 'TechCorp',
+    companyLogo: 'https://logo.clearbit.com/techcorp.com',
     expires: '2025-09-01',
     position: 'Frontend Developer',
     startingSalary: 60000,
@@ -17,26 +18,28 @@ export const mockJobs: Job[] = [
   {
     id: 2,
     company: 'HealthPlus',
+    companyLogo: 'https://logo.clearbit.com/designly.com',
     expires: '2025-10-01',
     position: 'Backend Engineer',
     startingSalary: 70000,
     workType: 'onsite',
     location: 'New York',
     country: 'USA',
-    qualifications: 'Node.js, PostgreSQL, Docker',
+    qualifications: 'Node.js, PostgreSQL, Javascript',
     description: 'Build scalable APIs for healthcare solutions.',
     isApplied: false
   },
   {
     id: 3,
     company: 'EduSoft',
+    companyLogo: 'https://logo.clearbit.com/udemy.com',
     expires: '2025-08-30',
     position: 'Fullstack Engineer',
     startingSalary: 65000,
     workType: 'hybrid',
     location: 'London',
     country: 'UK',
-    qualifications: 'Angular, Node.js, MongoDB',
+    qualifications: 'Angular, Node.js, PostgreSQL',
     description: 'Contribute to building an e-learning platform.',
     isApplied: false
   }

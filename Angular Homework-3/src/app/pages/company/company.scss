@@ -1,4 +1,28 @@
-.company-container { 
-    padding: 1.5rem; 
-    color: #eaeaea; 
+.company-container {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  color: #eee;
+}
+
+.company-header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.company-logo-large {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff;
+  padding: 8px;
+}
+
+.company-details { 
+    background: rgba(255,255,255,0.02); 
+    padding: 1rem; 
+    border-radius: 8px; 
 }

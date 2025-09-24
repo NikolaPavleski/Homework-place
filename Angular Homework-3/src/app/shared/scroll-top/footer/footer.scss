@@ -1,0 +1,44 @@
+.app-footer {
+  background: #0b0b0f;
+  color: #dcd6ff;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .col { 
+    flex: 1; 
+    min-width: 180px; 
+  }
+  .col h4 { 
+    margin-bottom: 0.5rem; 
+    color: #fff; 
+  }
+  .col ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+  }
+  .col a { 
+    color: #dcd6ff; 
+    text-decoration: none; 
+  }
+  .social a { 
+    margin-right: 0.5rem; 
+    color: #dcd6ff; 
+    font-size: 1.25rem; 
+  }
+
+  .copyright {
+    text-align: center;
+    margin-top: 1rem;
+    color: #9b98c6;
+  }
+}

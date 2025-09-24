@@ -1,12 +1,17 @@
 <div class="job-card">
   <div class="job-summary">
-    <h3 class="job-title">{{ job().position }}</h3>
-    <div class="job-meta">
-      <span class="company">
-        <a [routerLink]="['/company', job().id]">{{ job().company }}</a>
-      </span>
-      <span class="salary">Salary: {{ job().startingSalary | currency }}</span>
-      <span class="work-type">Work Type: {{ job().workType }}</span>
+    <div class="logo-and-title">
+      <img class="company-logo" [src]="logoSrc()" alt="{{ job().company }} logo" (error)="onLogoError()" />
+      <div class="title-block">
+        <h3 class="job-title">{{ job().position }}</h3>
+        <div class="job-meta">
+          <span class="company">
+            <a [routerLink]="['/company', job().id]">{{ job().company }}</a>
+          </span>
+          <span class="salary">Salary: {{ job().startingSalary | currency }}</span>
+          <span class="work-type">Work Type: {{ job().workType }}</span>
+        </div>
+      </div>
     </div>
 
     <div class="actions">

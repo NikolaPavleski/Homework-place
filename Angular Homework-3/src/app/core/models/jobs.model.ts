@@ -10,4 +10,5 @@ export interface Job {
   qualifications: string;
   description: string;
   isApplied: boolean;
+  companyLogo?: string;
 }

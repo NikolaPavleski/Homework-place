@@ -1,13 +1,12 @@
-<section>
-  @if (jobs().length === 0) {
-    <p class="muted">You haven’t applied to any jobs yet.</p>
-  } @else {
+@if (appliedJobs().length > 0) {
+  <section class="applied-section">
+    <h3>Applied Jobs ({{ appliedJobs().length }})</h3>
     <ul class="list">
-      @for (job of jobs(); track job.id) {
+      @for (job of appliedJobs(); track job.id) {
         <li class="list-item">
           <app-job-item [job]="job" (cancel)="onCancel($event)"></app-job-item>
         </li>
       }
     </ul>
-  }
-</section>
+  </section>
+}

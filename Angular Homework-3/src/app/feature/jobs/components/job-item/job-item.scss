@@ -1,75 +1,74 @@
 .job-card {
-  background: #1a1a1a;
-  border: 1px solid #2a2a2a;
+  background: #111; 
+  color: #fff;
   border-radius: 10px;
   padding: 1rem;
-  margin-bottom: 1rem;
-  transition: border-color .2s ease, transform .2s ease;
-
-  &:hover {
-    transform: translateY(-2px);
-    border-color: #7e3ff2;
-  }
+  margin: 0.5rem 0;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
 }
 
-.job-summary {
-  display: grid;
-  gap: .5rem;
+.logo-and-title {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.company-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff;
+  padding: 6px;
+}
+
+.title-block {
+  flex: 1;
 }
 
 .job-title {
-  color: #b27dfc;
-  margin: 0;
+  margin: 0 0 0.25rem 0;
+  font-size: 1.1rem;
 }
 
 .job-meta {
   display: flex;
-  flex-wrap: wrap;
-  gap: .75rem;
-  color: #ddd;
-
-  .company { font-weight: 600; }
-  .salary, .work-type { opacity: .9; }
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: #dcd6ff;
 }
 
 .actions {
+  margin-top: 0.75rem;
   display: flex;
-  gap: .5rem;
-  margin-top: .25rem;
-}
-
-.job-details {
-  margin-top: .75rem;
-  padding-top: .75rem;
-  border-top: 1px solid #2a2a2a;
-  color: #cfcfcf;
-
-  p { margin: .25rem 0; }
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .btn {
-  padding: .45rem .8rem;
-  border-radius: 8px;
-  border: 1px solid #3a3a3a;
-  background: #2a2a2a;
-  color: #eee;
-  cursor: pointer;
-  transition: background .15s ease, color .15s ease, border-color .15s ease;
-
-  &:hover { background: #333; border-color: #555; }
-}
-
-.btn.primary {
-  background: #7e3ff2;
-  border-color: #7e3ff2;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.08);
   color: #fff;
-
-  &:hover { background: #9a5cfc; border-color: #9a5cfc; }
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
 }
 
-.btn.danger {
-  background: #b51f5d;
-  border-color: #b51f5d;
+.btn.primary { 
+  background: linear-gradient(90deg,#8a6bff,#6b9eff); 
+  border: none; 
+  color: #fff; 
+}
 
-  &:hover { background: #d43a77; border-color: #d43a77; }
+.btn.danger { 
+  background: #ff6b6b; 
+  border: none; 
+  color: #fff; 
+}
+
+.btn.edit { 
+  background: #444; 
+  border: none; 
+  color: #fff; 
 }

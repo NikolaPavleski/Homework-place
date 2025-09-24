@@ -1,31 +1,45 @@
 <div class="contact-container">
-  <h2>Contact Us</h2>
-  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-    <label>First Name</label>
-    <input formControlName="firstName" type="text" />
+  <div class="contact-card">
+    <h2>Contact Job Seeker</h2>
+    <p class="lead">We’d love to hear from you — questions, feedback, or partnership inquiries.</p>
 
-    <label>Last Name</label>
-    <input formControlName="lastName" type="text" />
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+      <div class="row">
+        <div class="col">
+          <label>First Name</label>
+          <input formControlName="firstName" type="text" />
+        </div>
+        <div class="col">
+          <label>Last Name</label>
+          <input formControlName="lastName" type="text" />
+        </div>
+      </div>
 
-    <label>Email</label>
-    <input formControlName="email" type="email" />
+      <label>Email</label>
+      <input formControlName="email" type="email" />
 
-    <label>Phone Number</label>
-    <input formControlName="phoneNumber" type="tel" />
+      <label>Phone Number</label>
+      <input formControlName="phoneNumber" type="tel" />
 
-    <label>Message</label>
-    <textarea formControlName="message"></textarea>
+      <label>Message</label>
+      <textarea formControlName="message" maxlength="500"></textarea>
 
-    <button type="submit" [disabled]="contactForm.invalid">Send Message</button>
-  </form>
-
-  <div class="company-info">
-    <h3>About Job Seeker</h3>
-    <p>Job Seeker connects talented people with amazing opportunities worldwide.</p>
-    <div class="social-links">
-      <a href="#"><i class="fa fa-facebook"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
-      <a href="#"><i class="fa fa-linkedin"></i></a>
-    </div>
+      <button class="btn primary" type="submit" [disabled]="contactForm.invalid">Send Message</button>
+    </form>
   </div>
+
+  <aside class="contact-side">
+    <div class="company-info">
+      <h3>About Job Seeker</h3>
+      <p>Job Seeker connects talented professionals with meaningful opportunities. We curate listings and streamline applications so job hunting is faster and more effective.</p>
+      <p><strong>Address:</strong> 12 Technology Way, Innovation City</p>
+      <p><strong>Email:</strong> hello@jobseeker.example</p>
+    </div>
+
+    <div class="social-links">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>
+  </aside>
 </div>

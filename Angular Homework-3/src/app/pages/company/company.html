@@ -1,15 +1,20 @@
 <div class="company-container">
   @if (companyJob) {
-    <h2>{{ companyJob.company }}</h2>
-    <p><strong>Position:</strong> {{ companyJob.position }}</p>
-    <p><strong>Location:</strong> {{ companyJob.location }}, {{ companyJob.country }}</p>
-    <p><strong>Description:</strong> {{ companyJob.description }}</p>
-    <p><strong>Qualifications:</strong> {{ companyJob.qualifications }}</p>
+    <div class="company-header">
+      <img class="company-logo-large" src="{{ companyJob.companyLogo || 'https://via.placeholder.com/120x120?text=Logo' }}" alt="{{ companyJob.company }} logo" />
+      <div>
+        <h2>{{ companyJob.company }}</h2>
+        <p class="position">{{ companyJob.position }}</p>
+      </div>
+    </div>
+
+    <div class="company-details">
+      <p><strong>Location:</strong> {{ companyJob.location }}, {{ companyJob.country }}</p>
+      <p><strong>Description:</strong> {{ companyJob.description }}</p>
+      <p><strong>Qualifications:</strong> {{ companyJob.qualifications }}</p>
+      <p><strong>Expires:</strong> {{ companyJob.expires | date:'mediumDate' }}</p>
+    </div>
   } @else {
     <p>No company details found.</p>
   }
 </div>
-
-<ng-template #notFound>
-  <p>No company details found.</p>
-</ng-template>
